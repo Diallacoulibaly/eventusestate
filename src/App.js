@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const [nom,setNom]=useState();
+const [prenom,setPrenom]=useState();
+const [info,setInfo]=useState();
+
+
+  
+  return(
+    <div>
+      <h1>Bienvenu sur notre page d'accueil</h1>
+      <form >
+        <label>veuillez saisir votre nom:</label>
+        <input type='text' onChange={(e)=>{setNom(e.target.value.toUpperCase())}}/>
+        <br/>
+        <label>veuillez saisir votre prenom:</label>
+        <input type='text' onChange={(e)=>{setPrenom(e.target.value.toUpperCase())}}/>
+      </form>
+     <button onClick={emp=>{setInfo(`nom:${nom} prenom:${prenom}`)}}>click</button>
+     <p>{info}</p>
     </div>
-  );
+  )
+  
 }
 
 export default App;
