@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+.produits{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    
+  
+  
+}
+
+.produit{
+  border: 1px solid black;
+  width: 22%;
+  min-width: 200px;
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+  
+
+}
+.produit:hover{
+  box-shadow: 0 0 10px 10px lightgray ;
+}
+.produit img{
+  max-width: 150px;
+  align-self: center;
+}
+
